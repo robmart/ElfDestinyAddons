@@ -18,6 +18,7 @@ divine_spark_rituals.001 = { # Ascension Ritual
 	}
 
 	immediate = {
+		play_music_cue = "mx_cue_positive_effect"
 	}
 
 	option = { # ascend
@@ -34,20 +35,21 @@ divine_spark_rituals.001 = { # Ascension Ritual
 		add_piety = {
 			value = ritual_solo_cost_neg
 		}
-		custom_tooltip = {
-			text = elf_trait_evolved
-			elf_trait_ascension = yes
-		}
+		elf_trait_ascension = yes
 	}
 
 	option = { # ascend with spouse
 		name = divine_spark_rituals.001.ascend_spouse
+		trait = none
 
 		trigger = {
 			piety >= ritual_spouse_cost
 			is_married = yes
-			any_spouse = {
-				is_any_elf_type = yes
+			custom_tooltip = {
+				text = spouse_is_elf
+				primary_spouse = {
+					is_any_elf_type = yes
+				}
 			}
 		}
 
@@ -58,14 +60,36 @@ divine_spark_rituals.001 = { # Ascension Ritual
 		add_piety = {
 			value = ritual_spouse_cost_neg
 		}
+		elf_trait_ascension = yes
+		primary_spouse = {
+			if = {
+				limit = {
+					is_any_elf_type = yes
+				}
+				elf_trait_ascension = yes
+			}
+		}
 	}
 
-	option = { # ascend with spouse and concubine
-		name = divine_spark_rituals.001.ascend_concubine
+	option = { # ascend with consorts
+		name = divine_spark_rituals.001.ascend_consorts
+		trait = none
 
 		trigger = {
-			piety >= ritual_solo_cost
-			number_of_concubines > 1
+			piety >= ritual_consort_cost
+			custom_tooltip = {
+				text = no_concort
+				OR = {
+					number_of_concubines > 0
+					is_married = yes
+				}
+			}
+			custom_tooltip = {
+				text = consort_is_elf
+				any_consort = {
+					is_any_elf_type = yes
+				}
+			}
 		}
 
 		show_as_unavailable = {
@@ -73,12 +97,19 @@ divine_spark_rituals.001 = { # Ascension Ritual
 		}
 
 		add_piety = {
-			value = ritual_solo_cost_neg
+			value = ritual_consort_cost_neg
+		}
+		elf_trait_ascension = yes
+		every_consort = {
+			limit = {
+				is_any_elf_type = yes
+			}
+			elf_trait_ascension = yes
 		}
 	}
 
     option = { # do not ascend
-        name = divine_spark_rituals.001.dont
+        name = divine_spark_rituals.001.cancel
 
     }
 }

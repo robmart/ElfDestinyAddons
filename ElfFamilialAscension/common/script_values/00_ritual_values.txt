@@ -96,15 +96,33 @@ ritual_solo_cost_neg = {
 ritual_spouse_cost = {
     value = 0
     add = ritual_solo_cost
-    every_spouse = {
-        limit = {
-            is_any_elf_type = yes
+    primary_spouse = {
+        if = {
+            limit = {
+                is_any_elf_type = yes
+            }
+            add = ritual_solo_cost
         }
-        add = 1
     }
 }
 
 ritual_spouse_cost_neg = {
     value = 0
     subtract = ritual_spouse_cost
+}
+
+ritual_consort_cost = {
+    value = 0
+    add = ritual_solo_cost
+    every_consort = {
+        limit = {
+            is_any_elf_type = yes
+        }
+        add = ritual_solo_cost
+    }
+}
+
+ritual_consort_cost_neg = {
+    value = 0
+    subtract = ritual_consort_cost
 }
