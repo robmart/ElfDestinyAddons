@@ -104,6 +104,27 @@ ritual_spouse_cost = {
             add = ritual_solo_cost
         }
     }
+
+    if = {
+        limit = {
+            has_game_rule = 5_group_discount
+        }
+        multiply = 0.95
+    }
+
+    if = {
+        limit = {
+            has_game_rule = 10_group_discount
+        }
+        multiply = 0.9
+    }
+
+    if = {
+        limit = {
+            has_game_rule = 25_group_discount
+        }
+        multiply = 0.75
+    }
 }
 
 ritual_spouse_cost_neg = {
@@ -119,6 +140,27 @@ ritual_consort_cost = {
             is_any_elf_type = yes
         }
         add = ritual_solo_cost
+    }
+
+    if = {
+        limit = {
+            has_game_rule = 5_group_discount
+        }
+        multiply = 0.95
+    }
+
+    if = {
+        limit = {
+            has_game_rule = 10_group_discount
+        }
+        multiply = 0.9
+    }
+
+    if = {
+        limit = {
+            has_game_rule = 25_group_discount
+        }
+        multiply = 0.75
     }
 }
 

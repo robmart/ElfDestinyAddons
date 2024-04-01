@@ -6,3 +6,13 @@
   setting_spouse_only_desc:0 "The ascension ritual can optionally affect your primary spouse"
   setting_spouse_and_consort:0 "Spouse and Consort"
   setting_spouse_and_consort_desc:0 "The ascension ritual can optionally affect your primary spouse or all your consorts"
+
+  rule_ritual_group_discount:0 "#color_dark_blue;medium_glow Elf#!: Group Ritual Discount"
+  setting_no_group_discount:0 "No Discount"
+  setting_no_group_discount_desc:0 "Group ritual has no discount"
+  setting_5_group_discount:0 "5% Discount"
+  setting_5_group_discount_desc:0 "Group ritual costs 5% less"
+  setting_10_group_discount:0 "10% Discount"
+  setting_10_group_discount_desc:0 "Group ritual costs 10% less"
+  setting_25_group_discount:0 "25% Discount"
+  setting_25_group_discount_desc:0 "Group ritual costs 25% less"
