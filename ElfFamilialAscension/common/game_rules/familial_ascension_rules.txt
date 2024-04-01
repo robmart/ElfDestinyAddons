@@ -1,0 +1,12 @@
+ritual_type = {
+
+    categories = {
+        tweaks
+    }
+
+    default = spouse_and_consort
+
+    solo_only = {}
+    spouse_only = {}
+    spouse_and_consort = {}
+}

@@ -1,0 +1,8 @@
+﻿l_english:
+  rule_ritual_type:0 "#color_dark_blue;medium_glow Elf#!: Permitted Ritual Types"
+  setting_solo_only:0 "Solo Only"
+  setting_solo_only_desc:0 "The ascension ritual can only affect you"
+  setting_spouse_only:0 "Spouse"
+  setting_spouse_only_desc:0 "The ascension ritual can optionally affect your primary spouse"
+  setting_spouse_and_consort:0 "Spouse and Consort"
+  setting_spouse_and_consort_desc:0 "The ascension ritual can optionally affect your primary spouse or all your consorts"

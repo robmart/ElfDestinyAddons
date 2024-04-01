@@ -43,6 +43,9 @@ divine_spark_rituals.001 = { # Ascension Ritual
 		trait = none
 
 		trigger = {
+			NOT = {
+				has_game_rule = solo_only
+			}
 			piety >= ritual_spouse_cost
 			is_married = yes
 			custom_tooltip = {
@@ -54,7 +57,9 @@ divine_spark_rituals.001 = { # Ascension Ritual
 		}
 
 		show_as_unavailable = {
-			always = yes
+			NOT = {
+				has_game_rule = solo_only
+			}
 		}
 
 		add_piety = {
@@ -76,6 +81,7 @@ divine_spark_rituals.001 = { # Ascension Ritual
 		trait = none
 
 		trigger = {
+			has_game_rule = spouse_and_consort
 			piety >= ritual_consort_cost
 			custom_tooltip = {
 				text = no_concort
@@ -93,7 +99,7 @@ divine_spark_rituals.001 = { # Ascension Ritual
 		}
 
 		show_as_unavailable = {
-			always = yes
+			has_game_rule = spouse_and_consort
 		}
 
 		add_piety = {
