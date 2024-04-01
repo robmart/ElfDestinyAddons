@@ -92,3 +92,19 @@ ritual_solo_cost_neg = {
     value = 0
     subtract = ritual_solo_cost
 }
+
+ritual_spouse_cost = {
+    value = 0
+    add = ritual_solo_cost
+    every_spouse = {
+        limit = {
+            is_any_elf_type = yes
+        }
+        add = 1
+    }
+}
+
+ritual_spouse_cost_neg = {
+    value = 0
+    subtract = ritual_spouse_cost
+}

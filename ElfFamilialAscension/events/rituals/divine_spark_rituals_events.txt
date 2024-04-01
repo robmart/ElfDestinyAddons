@@ -40,6 +40,43 @@ divine_spark_rituals.001 = { # Ascension Ritual
 		}
 	}
 
+	option = { # ascend with spouse
+		name = divine_spark_rituals.001.ascend_spouse
+
+		trigger = {
+			piety >= ritual_spouse_cost
+			is_married = yes
+			any_spouse = {
+				is_any_elf_type = yes
+			}
+		}
+
+		show_as_unavailable = {
+			always = yes
+		}
+
+		add_piety = {
+			value = ritual_spouse_cost_neg
+		}
+	}
+
+	option = { # ascend with spouse and concubine
+		name = divine_spark_rituals.001.ascend_concubine
+
+		trigger = {
+			piety >= ritual_solo_cost
+			number_of_concubines > 1
+		}
+
+		show_as_unavailable = {
+			always = yes
+		}
+
+		add_piety = {
+			value = ritual_solo_cost_neg
+		}
+	}
+
     option = { # do not ascend
         name = divine_spark_rituals.001.dont
 
