@@ -48,7 +48,7 @@ divine_spark_rituals.001 = { # Ascension Ritual
 			custom_tooltip = {
 				text = spouse_is_elf
 				primary_spouse = {
-					is_any_elf_type = yes
+					is_below_top_elf_type = yes
 				}
 			}
 		}
@@ -64,7 +64,7 @@ divine_spark_rituals.001 = { # Ascension Ritual
 		primary_spouse = {
 			if = {
 				limit = {
-					is_any_elf_type = yes
+					is_below_top_elf_type = yes
 				}
 				elf_trait_ascension = yes
 			}
@@ -87,7 +87,7 @@ divine_spark_rituals.001 = { # Ascension Ritual
 			custom_tooltip = {
 				text = consort_is_elf
 				any_consort = {
-					is_any_elf_type = yes
+					is_below_top_elf_type = yes
 				}
 			}
 		}
@@ -102,7 +102,7 @@ divine_spark_rituals.001 = { # Ascension Ritual
 		elf_trait_ascension = yes
 		every_consort = {
 			limit = {
-				is_any_elf_type = yes
+				is_below_top_elf_type = yes
 			}
 			elf_trait_ascension = yes
 		}

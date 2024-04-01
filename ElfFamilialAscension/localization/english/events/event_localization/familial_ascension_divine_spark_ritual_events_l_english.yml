@@ -5,5 +5,5 @@
   WILL_ASCEND:0 "[CHARACTER.GetFirstName]'s Elf trait will evolve to a higher level!"
   WILL_ASCEND_FIRST:0 "My Elf trait will evolve to a higher level!"
   no_concort:0 "You are #bold not#! married and you have #bold no#! concubines"
-  spouse_is_elf:0 "Your spouse is #bold not#! an Elf"
-  consort_is_elf:0 "#bold None#! of your consorts is an Elf"
+  spouse_is_elf:0 "Your spouse is #bold not#! an Elf below the peak of ascension"
+  consort_is_elf:0 "#bold None#! of your consorts is an Elf below the peak of ascension"
