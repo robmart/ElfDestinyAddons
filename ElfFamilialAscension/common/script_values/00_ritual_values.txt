@@ -1,4 +1,4 @@
-ritual_solo_cost = {
+﻿ritual_solo_cost = {
     value = 0
     if = {
         limit = {

@@ -1,4 +1,4 @@
-###Tribe 1 - 4 from elf, 5 from cow
+﻿###Tribe 1 - 4 from elf, 5 from cow
 
 @holding_illustration_arid = "gfx/interface/illustrations/holding_types/tribe_arid.dds"
 @holding_illustration_grass = "gfx/interface/illustrations/holding_types/tribe_grass.dds"

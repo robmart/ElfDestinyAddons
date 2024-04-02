@@ -1,4 +1,4 @@
-elf_blood_dynasty = {
+﻿elf_blood_dynasty = {
     icon = elf_blood
 }
 

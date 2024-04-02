@@ -1,4 +1,4 @@
-advanced_tribal_government = {
+﻿advanced_tribal_government = {
 	create_cadet_branches = yes
 	rulers_should_have_dynasty = yes
 	regiments_prestige_as_gold = yes

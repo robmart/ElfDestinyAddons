@@ -1,4 +1,4 @@
-ritual_type = {
+﻿ritual_type = {
 
     categories = {
         tweaks
