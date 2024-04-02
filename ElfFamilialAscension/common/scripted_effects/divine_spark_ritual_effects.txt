@@ -226,3 +226,17 @@
 	}
 }
 
+elf_dynasty_ascension = {
+	if = {
+		limit = {
+			exists = dynasty
+			dynasty = {
+				has_dynasty_modifier = elf_blood_dynasty
+			}
+		}
+		dynasty = {
+			remove_dynasty_modifier = elf_blood_dynasty
+			add_dynasty_modifier = elf_dynasty
+		}
+	}
+}

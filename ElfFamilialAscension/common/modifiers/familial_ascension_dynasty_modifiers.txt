@@ -1,0 +1,43 @@
+elf_blood_dynasty = {
+    icon = elf_blood
+}
+
+elf_dynasty = {
+    icon = elf
+}
+
+high_elf_dynasty = {
+    icon = high_elf_blood
+}
+
+true_elf_dynasty = {
+    icon = true_elf_blood
+}
+
+fae_dynasty = {
+    icon = fae
+}
+
+fae_radiant_dynasty = {
+    icon = fae_radiant
+}
+
+celestial_dynasty = {
+    icon = celestial
+}
+
+seraphic_celestial_dynasty = {
+    icon = serephic_celestial
+}
+
+eldar_dynasty = {
+    icon = eldar
+}
+
+maiar_dynasty = {
+    icon = maiar
+}
+
+valar_dynasty = {
+    icon = valar
+}
