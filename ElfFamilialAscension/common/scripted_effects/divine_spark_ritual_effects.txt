@@ -239,4 +239,125 @@ elf_dynasty_ascension = {
 			add_dynasty_modifier = elf_dynasty
 		}
 	}
+	else_if = {
+		limit = {
+			exists = dynasty
+			dynasty = {
+				has_dynasty_modifier = elf_dynasty
+			}
+		}
+		dynasty = {
+			remove_dynasty_modifier = elf_dynasty
+			add_dynasty_modifier = high_elf_dynasty
+		}
+	}
+	else_if = {
+		limit = {
+			exists = dynasty
+			dynasty = {
+				has_dynasty_modifier = high_elf_dynasty
+			}
+		}
+		dynasty = {
+			remove_dynasty_modifier = high_elf_dynasty
+			add_dynasty_modifier = true_elf_dynasty
+		}
+	}
+	else_if = {
+		limit = {
+			exists = dynasty
+			dynasty = {
+				has_dynasty_modifier = true_elf_dynasty
+			}
+		}
+		dynasty = {
+			remove_dynasty_modifier = true_elf_dynasty
+			add_dynasty_modifier = fae_dynasty
+		}
+	}
+	else_if = {
+		limit = {
+			exists = dynasty
+			dynasty = {
+				has_dynasty_modifier = fae_dynasty
+			}
+		}
+		dynasty = {
+			remove_dynasty_modifier = fae_dynasty
+			add_dynasty_modifier = fae_radiant_dynasty
+		}
+	}
+	else_if = {
+		limit = {
+			exists = dynasty
+			dynasty = {
+				has_dynasty_modifier = fae_radiant_dynasty
+			}
+		}
+		dynasty = {
+			remove_dynasty_modifier = fae_radiant_dynasty
+			add_dynasty_modifier = celestial_dynasty
+		}
+	}
+	else_if = {
+		limit = {
+			exists = dynasty
+			dynasty = {
+				has_dynasty_modifier = celestial_dynasty
+			}
+		}
+		dynasty = {
+			remove_dynasty_modifier = celestial_dynasty
+			add_dynasty_modifier = seraphic_celestial_dynasty
+		}
+	}
+	else_if = {
+		limit = {
+			exists = dynasty
+			dynasty = {
+				has_dynasty_modifier = seraphic_celestial_dynasty
+			}
+		}
+		dynasty = {
+			remove_dynasty_modifier = seraphic_celestial_dynasty
+			add_dynasty_modifier = eldar_dynasty
+		}
+	}
+	else_if = {
+		limit = {
+			exists = dynasty
+			dynasty = {
+				has_dynasty_modifier = eldar_dynasty
+			}
+		}
+		dynasty = {
+			remove_dynasty_modifier = eldar_dynasty
+			add_dynasty_modifier = maiar_dynasty
+		}
+	}
+	else_if = {
+		limit = {
+			exists = dynasty
+			dynasty = {
+				has_dynasty_modifier = maiar_dynasty
+			}
+		}
+		dynasty = {
+			remove_dynasty_modifier = maiar_dynasty
+			add_dynasty_modifier = valar_dynasty
+		}
+	}
+	else_if = {
+		limit = {
+			exists = dynasty
+			NOT = {
+				dynasty = {
+					has_dynasty_modifier = valar_dynasty
+				}
+			}
+		}
+		dynasty = {
+			add_dynasty_modifier = elf_blood_dynasty
+		}
+	}
 }
