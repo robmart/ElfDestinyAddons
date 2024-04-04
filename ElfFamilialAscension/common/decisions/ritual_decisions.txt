@@ -408,12 +408,26 @@ dynasty_ritual_decision = {
 		is_ruler = yes
 		is_landed = yes
 		is_any_elf_type = yes
+
+		NOT = {
+			dynasty = {
+				# has_dynasty_modifier = valar_dynasty
+				has_dynasty_modifier = eldar_dynasty
+			}
+		}
 	}
 
 	is_valid = {
 		custom_tooltip = {
 			text = is_any_elf_type
 			is_any_elf_type = yes
+		}
+
+		NOT = {
+			dynasty = {
+				# has_dynasty_modifier = valar_dynasty
+				has_dynasty_modifier = eldar_dynasty
+			}
 		}
 	}
 

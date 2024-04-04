@@ -323,36 +323,37 @@ elf_dynasty_ascension = {
 			add_dynasty_modifier = eldar_dynasty
 		}
 	}
-	else_if = {
-		limit = {
-			exists = dynasty
-			dynasty = {
-				has_dynasty_modifier = eldar_dynasty
-			}
-		}
-		dynasty = {
-			remove_dynasty_modifier = eldar_dynasty
-			add_dynasty_modifier = maiar_dynasty
-		}
-	}
-	else_if = {
-		limit = {
-			exists = dynasty
-			dynasty = {
-				has_dynasty_modifier = maiar_dynasty
-			}
-		}
-		dynasty = {
-			remove_dynasty_modifier = maiar_dynasty
-			add_dynasty_modifier = valar_dynasty
-		}
-	}
+	# else_if = {
+	# 	limit = {
+	# 		exists = dynasty
+	# 		dynasty = {
+	# 			has_dynasty_modifier = eldar_dynasty
+	# 		}
+	# 	}
+	# 	dynasty = {
+	# 		remove_dynasty_modifier = eldar_dynasty
+	# 		add_dynasty_modifier = maiar_dynasty
+	# 	}
+	# }
+	# else_if = {
+	# 	limit = {
+	# 		exists = dynasty
+	# 		dynasty = {
+	# 			has_dynasty_modifier = maiar_dynasty
+	# 		}
+	# 	}
+	# 	dynasty = {
+	# 		remove_dynasty_modifier = maiar_dynasty
+	# 		add_dynasty_modifier = valar_dynasty
+	# 	}
+	# }
 	else_if = {
 		limit = {
 			exists = dynasty
 			NOT = {
 				dynasty = {
-					has_dynasty_modifier = valar_dynasty
+					# has_dynasty_modifier = valar_dynasty
+					has_dynasty_modifier = eldar_dynasty
 				}
 			}
 		}
