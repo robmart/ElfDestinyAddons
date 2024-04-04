@@ -168,3 +168,108 @@ ritual_consort_cost_neg = {
     value = 0
     subtract = ritual_consort_cost
 }
+
+dynasty_ritual_cost_mult = {
+    value = 0
+    if = {
+		limit = {
+			exists = dynasty
+			dynasty = {
+				has_dynasty_modifier = elf_blood_dynasty
+			}
+		}
+		add = 1
+	}
+	else_if = {
+		limit = {
+			exists = dynasty
+			dynasty = {
+				has_dynasty_modifier = elf_dynasty
+			}
+		}
+		add = 2
+	}
+	else_if = {
+		limit = {
+			exists = dynasty
+			dynasty = {
+				has_dynasty_modifier = high_elf_dynasty
+			}
+		}
+		add = 3
+	}
+	else_if = {
+		limit = {
+			exists = dynasty
+			dynasty = {
+				has_dynasty_modifier = true_elf_dynasty
+			}
+		}
+		add = 4
+	}
+	else_if = {
+		limit = {
+			exists = dynasty
+			dynasty = {
+				has_dynasty_modifier = fae_dynasty
+			}
+		}
+		add = 5
+	}
+	else_if = {
+		limit = {
+			exists = dynasty
+			dynasty = {
+				has_dynasty_modifier = fae_radiant_dynasty
+			}
+		}
+		add = 6
+	}
+	else_if = {
+		limit = {
+			exists = dynasty
+			dynasty = {
+				has_dynasty_modifier = celestial_dynasty
+			}
+		}
+		add = 7
+	}
+	else_if = {
+		limit = {
+			exists = dynasty
+			dynasty = {
+				has_dynasty_modifier = seraphic_celestial_dynasty
+			}
+		}
+		add = 8
+	}
+	else_if = {
+		limit = {
+			exists = dynasty
+			dynasty = {
+				has_dynasty_modifier = eldar_dynasty
+			}
+		}
+		add = 9
+	}
+	else_if = {
+		limit = {
+			exists = dynasty
+			dynasty = {
+				has_dynasty_modifier = maiar_dynasty
+			}
+		}
+		add = 10
+	}
+    else_if = {
+		limit = {
+			exists = dynasty
+			NOT = {
+				dynasty = {
+					has_dynasty_modifier = valar_dynasty
+				}
+			}
+		}
+		add = 0.5
+	}
+}

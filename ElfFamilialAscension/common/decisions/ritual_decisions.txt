@@ -383,3 +383,56 @@ blessing_ritual_decision = {
 		}
 	}
 }
+
+dynasty_ritual_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_divine_spark.dds"
+
+	desc = dynasty_ritual_decision_desc	
+	selection_tooltip = dynasty_ritual_decision_tooltip
+	major = yes
+	ai_goal = yes
+
+	cost = {
+		piety = { 
+			value = 10000 
+			multiply = dynasty_ritual_cost_mult
+		}
+		gold = { 
+			value = 10000 
+			multiply = dynasty_ritual_cost_mult
+		}
+	}
+
+	is_shown = {
+		is_ai = no
+		is_ruler = yes
+		is_landed = yes
+		is_any_elf_type = yes
+	}
+
+	is_valid = {
+		custom_tooltip = {
+			text = is_any_elf_type
+			is_any_elf_type = yes
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+	}
+
+	effect = {
+		elf_dynasty_ascension = yes
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 15
+		ai_value_modifier = {
+			ai_boldness = 1.0
+		}
+	}
+}

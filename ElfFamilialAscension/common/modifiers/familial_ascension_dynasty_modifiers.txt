@@ -7,11 +7,11 @@ elf_dynasty = {
 }
 
 high_elf_dynasty = {
-    icon = high_elf_blood
+    icon = high_elf
 }
 
 true_elf_dynasty = {
-    icon = true_elf_blood
+    icon = true_elf
 }
 
 fae_dynasty = {
