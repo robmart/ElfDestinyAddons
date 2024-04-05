@@ -1,0 +1,275 @@
+﻿dynasty_members_have_trait = {
+    dynasty = {
+        any_dynasty_member = {
+            count >= $COUNT$
+            has_trait = $TRAIT$
+        }
+    }
+}
+
+dynasty_members_have_elf_trait = {
+    dynasty = {
+        any_dynasty_member = {
+            count >= $COUNT$
+            OR = {
+                has_trait = $TRAIT$
+                has_trait = $TRAIT$_mortal
+            }
+        }
+    }
+}
+
+dynasty_members_have_elf_trait_or_higher = {
+    dynasty = {
+        any_dynasty_member = {
+            count >= $COUNT$
+            custom_description = {
+                text = dynasty_members_have_trait_$TRAIT_LOC$
+                OR = {
+                    AND = {
+                        $TRAIT$ = flag:elf_blood
+                        OR = {
+                            is_elf_blood = yes
+                            is_elf = yes
+                            is_high_elf = yes
+                            is_true_elf = yes
+                            is_fae = yes
+                            is_fae_radiant = yes
+                            is_celestial = yes
+                            is_seraphic_celestial = yes
+                            is_eldar = yes
+                            is_maiar = yes
+                            is_valar = yes
+                            is_aratar = yes
+                        }
+                    }   
+                    AND = {
+                        $TRAIT$ = flag:elf
+                        OR = {
+                            is_elf = yes
+                            is_high_elf = yes
+                            is_true_elf = yes
+                            is_fae = yes
+                            is_fae_radiant = yes
+                            is_celestial = yes
+                            is_seraphic_celestial = yes
+                            is_eldar = yes
+                            is_maiar = yes
+                            is_valar = yes
+                            is_aratar = yes
+                        }
+                    } 
+                    AND = {
+                        $TRAIT$ = flag:high_elf
+                        OR = {
+                            is_high_elf = yes
+                            is_true_elf = yes
+                            is_fae = yes
+                            is_fae_radiant = yes
+                            is_celestial = yes
+                            is_seraphic_celestial = yes
+                            is_eldar = yes
+                            is_maiar = yes
+                            is_valar = yes
+                            is_aratar = yes
+                        }
+                    } 
+                    AND = {
+                        $TRAIT$ = flag:true_elf
+                        OR = {
+                            is_true_elf = yes
+                            is_fae = yes
+                            is_fae_radiant = yes
+                            is_celestial = yes
+                            is_seraphic_celestial = yes
+                            is_eldar = yes
+                            is_maiar = yes
+                            is_valar = yes
+                            is_aratar = yes
+                        }
+                    } 
+                    AND = {
+                        $TRAIT$ = flag:fae
+                        OR = {
+                            is_fae = yes
+                            is_fae_radiant = yes
+                            is_celestial = yes
+                            is_seraphic_celestial = yes
+                            is_eldar = yes
+                            is_maiar = yes
+                            is_valar = yes
+                            is_aratar = yes
+                        }
+                    } 
+                    AND = {
+                        $TRAIT$ = flag:fae_radiant
+                        OR = {
+                            is_fae_radiant = yes
+                            is_celestial = yes
+                            is_seraphic_celestial = yes
+                            is_eldar = yes
+                            is_maiar = yes
+                            is_valar = yes
+                            is_aratar = yes
+                        }
+                    } 
+                    AND = {
+                        $TRAIT$ = flag:celestial
+                        OR = {
+                            is_celestial = yes
+                            is_seraphic_celestial = yes
+                            is_eldar = yes
+                            is_maiar = yes
+                            is_valar = yes
+                            is_aratar = yes
+                        }
+                    } 
+                    AND = {
+                        $TRAIT$ = flag:seraphic_celestial
+                        OR = {
+                            is_seraphic_celestial = yes
+                            is_eldar = yes
+                            is_maiar = yes
+                            is_valar = yes
+                            is_aratar = yes
+                        }
+                    } 
+                    AND = {
+                        $TRAIT$ = flag:eldar
+                        OR = {
+                            is_eldar = yes
+                            is_maiar = yes
+                            is_valar = yes
+                            is_aratar = yes
+                        }
+                    } 
+                    AND = {
+                        $TRAIT$ = flag:maiar
+                        OR = {
+                            is_maiar = yes
+                            is_valar = yes
+                            is_aratar = yes
+                        }
+                    } 
+                    AND = {
+                        $TRAIT$ = flag:valar
+                        OR = {
+                            is_valar = yes
+                            is_aratar = yes
+                        }
+                    } 
+                    AND = {
+                        $TRAIT$ = flag:aratar
+                        OR = {
+                            is_aratar = yes
+                        }
+                    } 
+                }
+            }
+        }
+    }
+}
+
+dynasty_can_do_ritual = {
+    trigger_if = {
+		limit = {
+			exists = dynasty
+			dynasty = {
+				has_dynasty_modifier = elf_blood_dynasty
+			}
+		}
+        dynasty_members_have_elf_trait_or_higher = { TRAIT = flag:elf COUNT = $COUNT$ TRAIT_LOC = elf }
+	}
+	trigger_else_if = {
+		limit = {
+			exists = dynasty
+			dynasty = {
+				has_dynasty_modifier = elf_dynasty
+			}
+		}
+        dynasty_members_have_elf_trait_or_higher = { TRAIT = flag:high_elf COUNT = $COUNT$ TRAIT_LOC = high_elf }
+	}
+	trigger_else_if = {
+		limit = {
+			exists = dynasty
+			dynasty = {
+				has_dynasty_modifier = high_elf_dynasty
+			}
+		}
+        dynasty_members_have_elf_trait_or_higher = { TRAIT = flag:true_elf COUNT = $COUNT$ TRAIT_LOC = true_elf }
+	}
+	trigger_else_if = {
+		limit = {
+			exists = dynasty
+			dynasty = {
+				has_dynasty_modifier = true_elf_dynasty
+			}
+		}
+        dynasty_members_have_elf_trait_or_higher = { TRAIT = flag:fae COUNT = $COUNT$ TRAIT_LOC = fae }
+	}
+	trigger_else_if = {
+		limit = {
+			exists = dynasty
+			dynasty = {
+				has_dynasty_modifier = fae_dynasty
+			}
+		}
+        dynasty_members_have_elf_trait_or_higher = { TRAIT = flag:fae_radiant COUNT = $COUNT$ TRAIT_LOC = fae_radiant }
+	}
+	trigger_else_if = {
+		limit = {
+			exists = dynasty
+			dynasty = {
+				has_dynasty_modifier = fae_radiant_dynasty
+			}
+		}
+        dynasty_members_have_elf_trait_or_higher = { TRAIT = flag:celestial COUNT = $COUNT$ TRAIT_LOC = celestial }
+	}
+	trigger_else_if = {
+		limit = {
+			exists = dynasty
+			dynasty = {
+				has_dynasty_modifier = celestial_dynasty
+			}
+		}
+        dynasty_members_have_elf_trait_or_higher = { TRAIT = flag:seraphic_celestial COUNT = $COUNT$ TRAIT_LOC = seraphic_celestial }
+	}
+	trigger_else_if = {
+		limit = {
+			exists = dynasty
+			dynasty = {
+				has_dynasty_modifier = seraphic_celestial_dynasty
+			}
+		}
+        dynasty_members_have_elf_trait_or_higher = { TRAIT = flag:eldar COUNT = $COUNT$ TRAIT_LOC = eldar }
+	}
+	trigger_else_if = {
+		limit = {
+			exists = dynasty
+			dynasty = {
+				has_dynasty_modifier = eldar_dynasty
+			}
+		}
+        dynasty_members_have_elf_trait_or_higher = { TRAIT = flag:maiar COUNT = $COUNT$ TRAIT_LOC = maiar }
+	}
+	trigger_else_if = {
+		limit = {
+			exists = dynasty
+			dynasty = {
+				has_dynasty_modifier = maiar_dynasty
+			}
+		}
+        dynasty_members_have_elf_trait_or_higher = { TRAIT = flag:valar COUNT = $COUNT$ TRAIT_LOC = valar }
+	}
+    trigger_else_if = {
+		limit = {
+			exists = dynasty
+			NOT = {
+				dynasty = {
+					has_dynasty_modifier = valar_dynasty
+				}
+			}
+		}
+        dynasty_members_have_elf_trait_or_higher = { TRAIT = flag:elf_blood COUNT = $COUNT$ TRAIT_LOC = elf_blood }
+	}
+}

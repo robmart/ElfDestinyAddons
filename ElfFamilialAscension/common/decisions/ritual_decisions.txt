@@ -423,6 +423,8 @@ dynasty_ritual_decision = {
 			dynasty.dynast = root
 		}
 
+		dynasty_can_do_ritual = { COUNT = 3 }
+
 		custom_tooltip = {
 			text = is_any_elf_type
 			is_any_elf_type = yes
