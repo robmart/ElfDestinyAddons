@@ -1,0 +1,4 @@
+﻿has_dynasty_modifier = {
+	global = HAS_DYNASTY_MODIFIER
+    global_not = NOT_HAS_DYNASTY_MODIFIER
+}

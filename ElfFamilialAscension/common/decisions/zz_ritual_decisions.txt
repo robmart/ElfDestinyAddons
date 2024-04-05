@@ -326,64 +326,6 @@ ascension_ritual_decision_final_threshold = {
 	}
 }
 
-blessing_ritual_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_divine_spark.dds"
-
-	desc = blessing_ritual_decision_desc
-	selection_tooltip = blessing_ritual_decision_tooltip
-	major = yes
-	ai_goal = yes
-
-	cost = {
-		piety = 5000
-	}
-
-	is_shown = {
-		is_ai = no
-		is_ruler = yes
-		is_landed = yes
-		is_any_elf_type = yes
-	}
-	
-	# Following conditions must be true to take decision, shown in requirements section
-	is_valid = {
-		custom_tooltip = {
-			text = is_any_elf_type
-			is_any_elf_type = yes
-		}
-	}
-
-	# Following conditions Will be shown as a validation error tooltip when False
-	is_valid_showing_failures_only = {
-		is_imprisoned = no
-		custom_description = {
-			text = blessings_options_are_available
-			blessings_options_are_available = yes
-		}
-	}
-
-	effect = {
-		show_as_tooltip = {
-			# TODO: see if this works
-			# restore_the_grand_portal_scripted_effect = yes
-		}
-		trigger_event = {
-			id = divine_spark_rituals.002
-		}
-	}
-	
-	ai_potential = {
-		always = yes
-	}
-
-	ai_will_do = {
-		base = 15
-		ai_value_modifier = {
-			ai_boldness = 1.0
-		}
-	}
-}
-
 dynasty_ritual_decision = {
 	picture = "gfx/interface/illustrations/decisions/decision_divine_spark.dds"
 

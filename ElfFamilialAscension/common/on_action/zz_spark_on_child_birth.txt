@@ -1,0 +1,243 @@
+﻿on_birth_child = {
+	# effect = {
+		
+	# }
+	on_actions = {
+		on_birth_elven_dynasty
+	}
+}
+
+on_birth_elven_dynasty = {
+	debug_log = "IN ELF DYNASTY TRAITS ASSIGNMENT!!!!"
+	effect = {
+		if = {
+			limit = {
+				is_any_elf_type = no
+				exists = dynasty
+				dynasty = {
+					has_dynasty_modifier = elf_blood_dynasty
+				}
+			}
+			debug_log = "1"
+			
+			remove_all_elf_traits_effect = yes
+			add_trait = elf_blood_mortal
+		}
+
+		if = {
+			limit = {
+				OR = {
+					is_any_elf_type = no
+					is_elf_blood = yes
+				}
+				exists = dynasty
+				dynasty = {
+					has_dynasty_modifier = elf_dynasty
+				}
+			}
+			debug_log = "2"
+
+			remove_all_elf_traits_effect = yes
+			add_trait = elf_mortal
+		}
+
+		if = {
+			limit = {
+				OR = {
+					is_any_elf_type = no
+					is_elf_blood = yes
+					is_elf = yes
+				}
+				exists = dynasty
+				dynasty = {
+					has_dynasty_modifier = high_elf_dynasty
+				}
+			}
+			debug_log = "3"
+
+			remove_all_elf_traits_effect = yes
+			add_trait = high_elf_mortal
+		}
+
+		if = {
+			limit = {
+				OR = {
+					is_any_elf_type = no
+					is_elf_blood = yes
+					is_elf = yes
+					is_high_elf = yes
+				}
+				exists = dynasty
+				dynasty = {
+					has_dynasty_modifier = true_elf_dynasty
+				}
+			}
+			debug_log = "4"
+
+			remove_all_elf_traits_effect = yes
+			add_trait = true_elf_mortal
+		}
+
+		if = {
+			limit = {
+				OR = {
+					is_any_elf_type = no
+					is_elf_blood = yes
+					is_elf = yes
+					is_high_elf = yes
+					is_true_elf = yes
+				}
+				exists = dynasty
+				dynasty = {
+					has_dynasty_modifier = fae_dynasty
+				}
+			}
+			debug_log = "5"
+
+			remove_all_elf_traits_effect = yes
+			add_trait = fae_mortal
+		}
+
+		if = {
+			limit = {
+				OR = {
+					is_any_elf_type = no
+					is_elf_blood = yes
+					is_elf = yes
+					is_high_elf = yes
+					is_true_elf = yes
+					is_fae = yes
+				}
+				exists = dynasty
+				dynasty = {
+					has_dynasty_modifier = fae_radiant_dynasty
+				}
+			}
+			debug_log = "6"
+
+			remove_all_elf_traits_effect = yes
+			add_trait = fae_radiant_mortal
+		}
+
+		if = {
+			limit = {
+				OR = {
+					is_any_elf_type = no
+					is_elf_blood = yes
+					is_elf = yes
+					is_high_elf = yes
+					is_true_elf = yes
+					is_fae = yes
+					is_fae_radiant = yes
+				}
+				exists = dynasty
+				dynasty = {
+					has_dynasty_modifier = celestial_dynasty
+				}
+			}
+			debug_log = "7"
+
+			remove_all_elf_traits_effect = yes
+			add_trait = celestial_mortal
+		}
+
+		if = {
+			limit = {
+				OR = {
+					is_any_elf_type = no
+					is_elf_blood = yes
+					is_elf = yes
+					is_high_elf = yes
+					is_true_elf = yes
+					is_fae = yes
+					is_fae_radiant = yes
+					is_celestial = yes
+				}
+				exists = dynasty
+				dynasty = {
+					has_dynasty_modifier = seraphic_celestial_dynasty
+				}
+			}
+			debug_log = "8"
+
+			remove_all_elf_traits_effect = yes
+			add_trait = seraphic_celestial_mortal
+		}
+
+		if = {
+			limit = {
+				OR = {
+					is_any_elf_type = no
+					is_elf_blood = yes
+					is_elf = yes
+					is_high_elf = yes
+					is_true_elf = yes
+					is_fae = yes
+					is_fae_radiant = yes
+					is_celestial = yes
+					is_seraphic_celestial = yes
+				}
+				exists = dynasty
+				dynasty = {
+					has_dynasty_modifier = eldar_dynasty
+				}
+			}
+			debug_log = "9"
+
+			remove_all_elf_traits_effect = yes
+			add_trait = eldar_mortal
+		}
+
+		if = {
+			limit = {
+				OR = {
+					is_any_elf_type = no
+					is_elf_blood = yes
+					is_elf = yes
+					is_high_elf = yes
+					is_true_elf = yes
+					is_fae = yes
+					is_fae_radiant = yes
+					is_celestial = yes
+					is_seraphic_celestial = yes
+					is_eldar = yes
+				}
+				exists = dynasty
+				dynasty = {
+					has_dynasty_modifier = maiar_dynasty
+				}
+			}
+			debug_log = "10"
+
+			remove_all_elf_traits_effect = yes
+			add_trait = maiar_mortal
+		}
+
+		if = {
+			limit = {
+				OR = {
+					is_any_elf_type = no
+					is_elf_blood = yes
+					is_elf = yes
+					is_high_elf = yes
+					is_true_elf = yes
+					is_fae = yes
+					is_fae_radiant = yes
+					is_celestial = yes
+					is_seraphic_celestial = yes
+					is_eldar = yes
+					is_maiar = yes
+				}
+				exists = dynasty
+				dynasty = {
+					has_dynasty_modifier = valar_dynasty
+				}
+			}
+			debug_log = "11"
+
+			remove_all_elf_traits_effect = yes
+			add_trait = valar_mortal
+		}
+
+	}
+}
