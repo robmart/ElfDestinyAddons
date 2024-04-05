@@ -1,0 +1,2 @@
+﻿l_english:
+  NOT_HAS_DYNASTY_MODIFIER:0 "The [DYNASTY.GetBaseName] [dynasty|E] does not have the $MODIFIER|V$ modifier"
