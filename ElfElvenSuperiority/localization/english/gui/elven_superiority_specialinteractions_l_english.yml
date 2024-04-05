@@ -1,2 +1,2 @@
 ﻿l_english:
-  MARRY_CONSANGUINITY_REASON:0 "Elves with () will never marry humans: $VALUE|+=0$"
+  CANT_MARRY_HUMAN:0 "Elves with [GetCultureTradition('tradition_elf_superiority').GetName] will never marry humans: $VALUE|+=0$"
