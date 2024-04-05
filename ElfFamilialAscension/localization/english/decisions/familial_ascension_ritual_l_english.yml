@@ -4,4 +4,4 @@
   dynasty_ritual_decision_confirm:0 "We are ready."
   dynasty_ritual_decision_tooltip:0 "Commune with the Divine Spark and empower your dynasty forever more."
 
-  is_dynasty_head:0 "You are the Dynasty head of the [GetPlayer.GetDynasty.GetBaseName|V] [dynasty|E]"
+  is_dynasty_head:0 "You are the dynasty head of the [GetPlayer.GetDynasty.GetBaseName|V] [dynasty|E]"
