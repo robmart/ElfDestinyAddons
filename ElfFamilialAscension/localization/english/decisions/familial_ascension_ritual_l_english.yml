@@ -1,0 +1,7 @@
+﻿l_english:
+  dynasty_ritual_decision:0 "Dynastic Ritual of Ascension"
+  dynasty_ritual_decision_desc:0 "Your dynasty has reached the pinnacle of power and is ready to be empowered!\n\nRetreat to your chambers with your kinsmen and begin your meditations. If the Divine Spark is receptive, your dynasty will become greater."
+  dynasty_ritual_decision_confirm:0 "We are ready."
+  dynasty_ritual_decision_tooltip:0 "Commune with the Divine Spark and empower your dynasty forever more."
+
+  is_dynasty_head:0 "You are the Dynasty head of the [GetPlayer.GetDynasty.GetBaseName|V] [dynasty|E]"
