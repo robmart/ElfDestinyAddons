@@ -2014,33 +2014,8 @@
 	modifier = {
 		add = -1000
 
-		OR = {
-			AND = {
-				scope:secondary_recipient = {
-					is_any_elf_type = yes
-					culture = {
-						has_cultural_tradition = tradition_elf_superiority
-					}
-				}
+		elf_human_seduction = { TARGET = scope:secondary_recipient OWNER = scope:secondary_actor }
 
-				scope:secondary_actor = {
-					is_any_elf_type = no
-				}
-			}
-
-			AND = {
-				scope:secondary_recipient = {
-					is_any_elf_type = no
-				}
-
-				scope:secondary_actor = {
-					is_any_elf_type = yes
-					culture = {
-						has_cultural_tradition = tradition_elf_superiority
-					}
-				}
-			}
-		}
 		desc = CANT_MARRY_HUMAN
 	}
 }
@@ -2303,33 +2278,8 @@ elopment_ai_accept_modifier = { #Should copy marriage_ai_accept_modifier on rele
 	modifier = {
 		add = -1000
 
-		OR = {
-			AND = {
-				scope:recipient = {
-					is_any_elf_type = yes
-					culture = {
-						has_cultural_tradition = tradition_elf_superiority
-					}
-				}
-
-				scope:actor = {
-					is_any_elf_type = no
-				}
-			}
-
-			AND = {
-				scope:recipient = {
-					is_any_elf_type = no
-				}
-
-				scope:actor = {
-					is_any_elf_type = yes
-					culture = {
-						has_cultural_tradition = tradition_elf_superiority
-					}
-				}
-			}
-		}
+		elf_human_seduction = { TARGET = scope:recipient OWNER = scope:actor }
+		
 		desc = CANT_MARRY_HUMAN
 	}
 }

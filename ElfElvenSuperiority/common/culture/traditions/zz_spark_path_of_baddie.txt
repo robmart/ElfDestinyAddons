@@ -29,6 +29,7 @@
 		harder_to_hybridize = yes
 		gain_a_superior_elf_ruler_modifier = yes
 		elves_cant_marry_humans = yes
+		elves_cant_love_humans = yes
 		expensive_convert_to_local_culture = yes
 		peasant_and_populist_factions_less_common = yes
 		courtiers_less_likely_to_leave_same_culture_court = yes
