@@ -1,0 +1,13 @@
+﻿human_marriage_aversion = {
+
+    categories = {
+        tweaks
+    }
+
+	default = no_aversion
+
+	elf_no_aversion = {}
+	elf_small_aversion = {}
+	elf_large_aversion = {}
+	elf_extreme_aversion = {}
+}

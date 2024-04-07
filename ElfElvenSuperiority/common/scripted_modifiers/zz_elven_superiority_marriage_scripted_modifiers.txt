@@ -2012,9 +2012,36 @@
 	}
 
 	modifier = {
+		add = -50
+
+		has_game_rule = elf_small_aversion
+		elf_human_seduction = { TARGET = scope:secondary_recipient OWNER = scope:secondary_actor }
+
+		desc = MARRY_HUMAN_AVERSION
+	}
+
+	modifier = {
+		add = -100
+
+		has_game_rule = elf_large_aversion
+		elf_human_seduction = { TARGET = scope:secondary_recipient OWNER = scope:secondary_actor }
+
+		desc = MARRY_HUMAN_AVERSION
+	}
+
+	modifier = {
+		add = -250
+
+		has_game_rule = elf_extreme_aversion
+		elf_human_seduction = { TARGET = scope:recipient OWNER = scope:actor }
+
+		desc = MARRY_HUMAN_AVERSION
+	}
+
+	modifier = {
 		add = -1000
 
-		elf_human_seduction = { TARGET = scope:secondary_recipient OWNER = scope:secondary_actor }
+		elf_human_seduction_superiority = { TARGET = scope:secondary_recipient OWNER = scope:secondary_actor }
 
 		desc = CANT_MARRY_HUMAN
 	}
@@ -2276,9 +2303,36 @@ elopment_ai_accept_modifier = { #Should copy marriage_ai_accept_modifier on rele
 	}
 
 	modifier = {
+		add = -50
+
+		has_game_rule = elf_small_aversion
+		elf_human_seduction = { TARGET = scope:recipient OWNER = scope:actor }
+
+		desc = MARRY_HUMAN_AVERSION
+	}
+
+	modifier = {
+		add = -100
+
+		has_game_rule = elf_large_aversion
+		elf_human_seduction = { TARGET = scope:recipient OWNER = scope:actor }
+
+		desc = MARRY_HUMAN_AVERSION
+	}
+
+	modifier = {
+		add = -250
+
+		has_game_rule = elf_extreme_aversion
+		elf_human_seduction = { TARGET = scope:recipient OWNER = scope:actor }
+
+		desc = MARRY_HUMAN_AVERSION
+	}
+
+	modifier = {
 		add = -1000
 
-		elf_human_seduction = { TARGET = scope:recipient OWNER = scope:actor }
+		elf_human_seduction_superiority = { TARGET = scope:recipient OWNER = scope:actor }
 		
 		desc = CANT_MARRY_HUMAN
 	}

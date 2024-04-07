@@ -1,0 +1,10 @@
+﻿l_english:
+  rule_human_marriage_aversion:0 "#color_dark_blue;medium_glow Elf#!: Human Marriage Aversion"
+  setting_elf_no_aversion:0 "No Aversion"
+  setting_elf_no_aversion_desc:0 "Elves will have no aversion to marrying humans"
+  setting_elf_small_aversion:0 "Small Aversion"
+  setting_elf_small_aversion_desc:0 "Elves will have a #N -50#! modifier to marriage acceptance when marrying humans"
+  setting_elf_large_aversion:0 "Large Aversion"
+  setting_elf_large_aversion_desc:0 "Elves will have a #N -100#! modifier to marriage acceptance when marrying humans"
+  setting_elf_extreme_aversion:0 "Extreme Aversion"
+  setting_elf_extreme_aversion_desc:0 "Elves will have a #N -250#! modifier to marriage acceptance when marrying humans"

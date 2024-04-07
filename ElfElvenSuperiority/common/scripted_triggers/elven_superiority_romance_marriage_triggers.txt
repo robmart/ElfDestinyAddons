@@ -1,4 +1,4 @@
-﻿elf_human_seduction = {
+﻿elf_human_seduction_superiority = {
     custom_description = {
         text = cant_seduce_elf
         OR = {
@@ -25,6 +25,34 @@
                     culture = {
                         has_cultural_tradition = tradition_elf_superiority
                     }
+                }
+            }
+        }
+    }
+}
+
+elf_human_seduction = {
+    custom_description = {
+        text = cant_seduce_elf
+
+        OR = {
+            AND = {
+                $TARGET$ = {
+                    is_any_elf_type = yes
+                }
+
+                $OWNER$ = {
+                    is_any_elf_type = no
+                }
+            }
+
+            AND = {
+                $TARGET$ = {
+                    is_any_elf_type = no
+                }
+
+                $OWNER$ = {
+                    is_any_elf_type = yes
                 }
             }
         }

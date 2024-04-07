@@ -2,4 +2,5 @@
   culture_parameter_elves_cant_marry_humans:0 "Elves of this culture will never marry humans"  
   culture_parameter_elves_cant_love_humans:0 "Elves of this culture will never become lovers with humans"  
   CANT_MARRY_HUMAN:0 "Elves with [GetCultureTradition('tradition_elf_superiority').GetName] will never marry humans: $VALUE|+=0$"
+  MARRY_HUMAN_AVERSION:0 "Elves are averse to marrying humans: $VALUE|+=0$"
   cant_seduce_elf:0 "Elves with [GetCultureTradition('tradition_elf_superiority').GetName] will never become lovers with humans"

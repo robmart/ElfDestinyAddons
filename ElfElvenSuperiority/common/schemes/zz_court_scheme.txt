@@ -173,7 +173,7 @@
 		}
 
 		NOT = {
-			elf_human_seduction = { TARGET = scope:target OWNER = scope:owner }
+			elf_human_seduction_superiority = { TARGET = scope:target OWNER = scope:owner }
 		}
 	}
 
