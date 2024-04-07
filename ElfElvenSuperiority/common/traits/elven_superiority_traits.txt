@@ -1,0 +1,26 @@
+﻿human_lover = {
+	category = fame
+
+	same_opinion = 20
+
+	ruler_designer_cost = 0
+
+	# triggered_opinion = {
+	# 	parameter = allows_unrestricted_marriage
+	# 	opinion_modifier = incest_intolerant
+	# 	check_missing = yes
+	# 	ignore_opinion_value_if_same_trait = yes
+	# }
+
+	# desc = {
+	# 	first_valid = {
+	# 		triggered_desc = {
+	# 			trigger = {
+	# 				NOT = { exists = this }
+	# 			}
+	# 			desc = trait_incestuous_desc
+	# 		}
+	# 		desc = trait_incestuous_character_desc
+	# 	}
+	# }
+}

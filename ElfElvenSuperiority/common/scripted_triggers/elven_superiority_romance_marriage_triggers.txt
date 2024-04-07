@@ -58,3 +58,13 @@ elf_human_seduction = {
         }
     }
 }
+
+relation_with_human_is_bad_for_me_or_my_liege = {
+    is_any_elf_type = yes
+	OR = {
+        culture = {
+            has_cultural_tradition = tradition_elf_superiority
+		}
+		any_liege_or_above = { culture = { has_cultural_tradition = tradition_elf_superiority } }
+	}
+}

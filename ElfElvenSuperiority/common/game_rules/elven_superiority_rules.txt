@@ -4,7 +4,7 @@
         tweaks
     }
 
-	default = no_aversion
+	default = elf_no_aversion
 
 	elf_no_aversion = {}
 	elf_small_aversion = {}
