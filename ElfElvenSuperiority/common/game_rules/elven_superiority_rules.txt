@@ -11,3 +11,16 @@
 	elf_large_aversion = {}
 	elf_extreme_aversion = {}
 }
+
+human_lover = {
+
+	categories = {
+		tweaks
+	}
+
+	default = human_lover_no_change
+
+	human_lover_no_change = {}
+	human_lover_illegal = {}
+	human_lover_impossible = {}
+}

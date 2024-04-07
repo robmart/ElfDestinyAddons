@@ -1,0 +1,15 @@
+﻿on_set_relation_lover = {
+	effect = {
+		# being lover with a human is forbidden
+		if = {
+			limit = {
+				elf_human_seduction_superiority = { TARGET = scope:target OWNER = root }
+				has_game_rule = human_lover_impossible
+			}
+			trigger_event = {
+				id = lover.0010
+				days = 1
+			}
+		}
+	}
+}
