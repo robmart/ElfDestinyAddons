@@ -5,12 +5,10 @@
 
 	ruler_designer_cost = 0
 
-	# triggered_opinion = {
-	# 	parameter = allows_unrestricted_marriage
-	# 	opinion_modifier = incest_intolerant
-	# 	check_missing = yes
-	# 	ignore_opinion_value_if_same_trait = yes
-	# }
+	triggered_opinion = {
+		opinion_modifier = human_lover_intolerant
+		ignore_opinion_value_if_same_trait = yes
+	}
 
 	# desc = {
 	# 	first_valid = {

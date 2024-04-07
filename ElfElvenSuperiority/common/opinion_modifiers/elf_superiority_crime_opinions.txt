@@ -1,0 +1,6 @@
+﻿human_lover_intolerant = {
+	opinion = -30
+	imprisonment_reason = yes
+	revoke_title_reason = yes
+	banish_reason = yes
+}
