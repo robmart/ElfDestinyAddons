@@ -8,3 +8,11 @@
   setting_elf_large_aversion_desc:0 "Elves will have a #N -100#! modifier to marriage acceptance when marrying humans"
   setting_elf_extreme_aversion:0 "Extreme Aversion"
   setting_elf_extreme_aversion_desc:0 "Elves will have a #N -250#! modifier to marriage acceptance when marrying humans"
+
+  rule_human_lover:0 "#color_dark_blue;medium_glow Elf#!: Human Lovers"
+  setting_human_lover_no_change:0 "No Change"
+  setting_human_lover_no_change_desc:0 "Elves having human lovers is perfectly normal"
+  setting_human_lover_illegal:0 "Illegal"
+  setting_human_lover_illegal_desc:0 "Having human lovers is a [crime|E] for elves with [GetCultureTradition('tradition_elf_superiority').GetName]"
+  setting_human_lover_impossible:0 "Impossible"
+  setting_human_lover_impossible_desc:0 "Having human lovers is impossible for elves with [GetCultureTradition('tradition_elf_superiority').GetName]"
