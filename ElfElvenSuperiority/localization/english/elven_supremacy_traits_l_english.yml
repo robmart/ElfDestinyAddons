@@ -1,0 +1,7 @@
+﻿l_english:
+  secret_human_lover:0 "Unworthy Lover"
+  secret_human_lover_type_desc:0 "This elf has committed a great taboo by laying with a lesser being. This is a weakness few can forgive."
+
+  trait_human_lover:0 "Unworthy Lover"
+  trait_human_lover_desc:0 "This elf has committed a great taboo by laying with a lesser being. This is a weakness few can forgive."
+  trait_human_lover_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] has committed a great taboo by laying with a lesser being. This is a weakness few can forgive."
