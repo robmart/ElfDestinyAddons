@@ -1,0 +1,30 @@
+e_albion = {
+    color = { 0 0 0 }
+    capital = c_wiltshire
+    can_be_named_after_dynasty = no
+
+    ai_primary_priority = {
+        if = {
+            limit = {
+                is_any_elf_type = yes
+            }
+            add = 100
+        }
+    }
+
+    k_lloegyr = {
+        color = { 0 0 0 }
+        capital = c_wiltshire
+        can_be_named_after_dynasty = no
+
+        ai_primary_priority = {
+            if = {
+                limit = {
+                    is_any_elf_type = yes
+                }
+                add = 100
+            }
+        }
+
+    }
+}

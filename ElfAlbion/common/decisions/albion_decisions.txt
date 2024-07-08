@@ -1,0 +1,79 @@
+form_the_kingdom_of_lloegyr_decision = {
+    picture = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
+    major = yes
+
+    ai_check_interval = 60
+
+    desc = form_the_kingdom_of_lloegyr_decision_desc
+    selection_tooltip = form_the_kingdom_of_lloegyr_decision_tooltip
+
+    is_shown = {
+        is_landed = yes
+        NOT = {
+            exists = title:k_lloegyr.holder
+        }
+        is_any_elf_type = yes
+        highest_held_title_tier < tier_kingdom
+        highest_held_title_tier >= tier_county
+        capital_province = {
+            geographical_region = world_europe_west_britannia
+        }
+    }
+
+    is_valid = {
+        is_independent_ruler = yes
+        prestige_level >= 2
+        piety_level >= 2
+        has_title = title:c_dorset
+        has_title = title:c_somerset
+        completely_controls = title:d_cornwall
+        completely_controls = title:d_gloucester
+        custom_description = {
+            text = has_expedition_amount_trigger
+            subject = root
+            object = title:b_salisbury
+            value = 5
+            # has_expedition_amount_trigger = { LOCATION = title:b_salisbury AMOUNT = 5 }
+        }
+    }
+
+    effect = {
+        save_scope_as = founder
+        create_title_and_vassal_change = {
+            type = created
+            save_scope_as = change
+        }
+        title:k_lloegyr = {
+            change_title_holder = {
+                holder = scope:founder
+                change = scope:change
+            }
+        }
+        resolve_title_and_vassal_change = scope:change
+
+        add_prestige = major_prestige_gain
+
+        title:c_dorset = { set_de_jure_liege_title = title:d_cornwall }
+        title:c_somerset = { set_de_jure_liege_title = title:d_cornwall }
+        title:d_cornwall = { set_de_jure_liege_title = title:k_lloegyr }
+        title:d_gloucester = { set_de_jure_liege_title = title:k_lloegyr }
+    }
+
+    cost = {
+        gold = {
+            # Since we want this to happen, it free for the AI...
+            value = 0
+            # ... but costs for players.
+            if = {
+                limit = { is_ai = no }
+                add = 200
+            }
+        }
+    }
+
+    ai_potential = {
+        always = yes
+    }
+
+    ai_will_do = { base = 100 }
+}
