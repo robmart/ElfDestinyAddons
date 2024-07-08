@@ -28,12 +28,12 @@ form_the_kingdom_of_lloegyr_decision = {
         has_title = title:c_somerset
         completely_controls = title:d_cornwall
         completely_controls = title:d_gloucester
-        custom_description = {
+        custom_description = { # TODO: This doesn't work if it's in the trigger itself for some reason
             text = has_expedition_amount_trigger
             subject = root
             object = title:b_salisbury
             value = 5
-            # has_expedition_amount_trigger = { LOCATION = title:b_salisbury AMOUNT = 5 }
+            has_expedition_amount_trigger = { LOCATION = title:b_salisbury AMOUNT = 5 }
         }
     }
 
