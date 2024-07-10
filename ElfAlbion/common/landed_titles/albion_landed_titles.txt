@@ -1,4 +1,4 @@
-e_albion = {
+e_west_albion = {
     color = { 0 0 0 }
     capital = c_wiltshire
     can_be_named_after_dynasty = no
@@ -12,7 +12,7 @@ e_albion = {
         }
     }
 
-    k_lloegyr = {
+    k_dumnonia = {
         color = { 0 0 0 }
         capital = c_wiltshire
         can_be_named_after_dynasty = no
@@ -25,6 +25,25 @@ e_albion = {
                 add = 100
             }
         }
+
+    }
+}
+
+e_east_albion = {
+    color = { 0 0 0 }
+    capital =
+    can_be_named_after_dynasty = no
+
+    ai_primary_priority = {
+        if = {
+            limit = {
+                is_any_elf_type = yes
+            }
+            add = 100
+        }
+    }
+
+    k_lloegyr = {
 
     }
 }

@@ -1,2 +1,2 @@
 ﻿l_english:
- has_expedition_amount_trigger_first:0 "You have performed an [GetActivityType('activity_expedition').GetName|l] $VALUE|0$ times in the [TARGET_TITLE.GetName]"
+ has_expedition_amount_trigger:0 "You have performed an [GetActivityType('activity_expedition').GetName|l] [amount] times in the [location.GetName]"

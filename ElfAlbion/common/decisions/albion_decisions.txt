@@ -1,19 +1,23 @@
-form_the_kingdom_of_lloegyr_decision = {
+form_the_kingdom_of_dumnonia_decision = {
     picture = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
     major = yes
 
     ai_check_interval = 60
 
-    desc = form_the_kingdom_of_lloegyr_decision_desc
-    selection_tooltip = form_the_kingdom_of_lloegyr_decision_tooltip
+    desc = form_the_kingdom_of_dumnonia_decision_desc
+    selection_tooltip = form_the_kingdom_of_dumnonia_decision_tooltip
 
     is_shown = {
         is_landed = yes
         NOT = {
-            exists = title:k_lloegyr.holder
+            exists = title:k_dumnonia.holder
         }
         is_any_elf_type = yes
-        highest_held_title_tier < tier_kingdom
+        OR = {
+            highest_held_title_tier < tier_kingdom
+            primary_title = title:e_east_albion
+            primary_title = title:k_lloegyr
+        }
         highest_held_title_tier >= tier_county
         capital_province = {
             geographical_region = world_europe_west_britannia
@@ -28,13 +32,7 @@ form_the_kingdom_of_lloegyr_decision = {
         has_title = title:c_somerset
         completely_controls = title:d_cornwall
         completely_controls = title:d_gloucester
-        custom_description = { # TODO: This doesn't work if it's in the trigger itself for some reason
-            text = has_expedition_amount_trigger
-            subject = root
-            object = title:b_salisbury
-            value = 5
-            has_expedition_amount_trigger = { LOCATION = title:b_salisbury AMOUNT = 5 }
-        }
+        has_expedition_amount_trigger = { LOCATION = title:b_salisbury AMOUNT = 2 }
     }
 
     effect = {
@@ -43,7 +41,7 @@ form_the_kingdom_of_lloegyr_decision = {
             type = created
             save_scope_as = change
         }
-        title:k_lloegyr = {
+        title:k_dumnonia = {
             change_title_holder = {
                 holder = scope:founder
                 change = scope:change
@@ -55,8 +53,12 @@ form_the_kingdom_of_lloegyr_decision = {
 
         title:c_dorset = { set_de_jure_liege_title = title:d_cornwall }
         title:c_somerset = { set_de_jure_liege_title = title:d_cornwall }
-        title:d_cornwall = { set_de_jure_liege_title = title:k_lloegyr }
-        title:d_gloucester = { set_de_jure_liege_title = title:k_lloegyr }
+        title:d_cornwall = { set_de_jure_liege_title = title:k_dumnonia }
+        title:d_gloucester = { set_de_jure_liege_title = title:k_dumnonia }
+
+        hidden_effect = {
+            title:c_hampton = { set_de_jure_liege_title = title:d_canterbury }
+        }
     }
 
     cost = {

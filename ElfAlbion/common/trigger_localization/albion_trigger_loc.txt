@@ -1,3 +1,0 @@
-has_expedition_amount_trigger = {
-    first = has_expedition_amount_trigger_first
-}
