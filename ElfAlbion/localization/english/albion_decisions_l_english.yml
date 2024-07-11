@@ -1,5 +1,9 @@
 ﻿l_english:
  form_the_kingdom_of_dumnonia_decision:0 "Restore the Kingdom of Dumnonia"
- form_the_kingdom_of_dumnonia_decision_desc:0 "Ever since the destruction of Camelot our people have yearned for its return. We will make the great Ancestor proud."
+ form_the_kingdom_of_dumnonia_decision_desc:0 "Ever since the destruction of Camelot our people have yearned for its return. We will make the Great Ancestor proud."
  form_the_kingdom_of_dumnonia_decision_tooltip:0 "Dumnonia becomes a [de_jure|E] [kingdom|E]."
  form_the_kingdom_of_dumnonia_decision_confirm:0 "For the King!"
+
+ form_the_empire_of_west_albion_decision:0 "Restore the Empire of $e_west_albion$"
+ form_the_empire_of_west_albion_decision_desc:0 "Long have we toiled to see the legacy of our Ancestor rebuilt. The time has almost come to see the Empire of $e_west_albion$ be reborn!"
+ form_the_empire_of_west_albion_decision_confirm:0 "For the Great Ancestor!"

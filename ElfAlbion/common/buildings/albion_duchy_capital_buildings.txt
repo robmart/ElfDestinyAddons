@@ -26,5 +26,7 @@
         epidemic_resistance = 5
     }
 
+    type_icon = "icon_building_legendary_palace.dds"
+
     type = duchy_capital
 }

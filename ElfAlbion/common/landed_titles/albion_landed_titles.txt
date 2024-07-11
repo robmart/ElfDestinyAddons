@@ -62,3 +62,18 @@ e_east_albion = {
         }
     }
 }
+
+d_west_mercia = {
+    color = { 200 30 0 }
+
+    capital = c_warwickshire # Warwick
+
+    ai_primary_priority = {
+        if = {
+            limit = {
+                culture = culture:anglo_saxon
+            }
+            add = 50
+        }
+    }
+}

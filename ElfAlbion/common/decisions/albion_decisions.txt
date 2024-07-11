@@ -32,7 +32,7 @@
         completely_controls = title:d_cornwall
         completely_controls = title:d_somerset
         completely_controls = title:d_gloucester
-        # has_expedition_amount_trigger = { LOCATION = title:b_salisbury AMOUNT = 5 }
+        has_expedition_amount_trigger = { LOCATION = title:b_salisbury AMOUNT = 5 }
     }
 
     effect = {
@@ -61,6 +61,98 @@
         set_realm_capital = title:c_wiltshire
 
         change_duchy_building_slot_location = { DUCHY = title:d_gloucester TARGET = title:b_salisbury BUILDING = city_of_camelot_ruins }
+    }
+
+    cost = {
+        gold = {
+            # Since we want this to happen, it free for the AI...
+            value = 0
+            # ... but costs for players.
+            if = {
+                limit = { is_ai = no }
+                add = 250
+            }
+        }
+    }
+
+    ai_potential = {
+        always = yes
+    }
+
+    ai_will_do = { base = 100 }
+}
+
+form_the_empire_of_west_albion_decision = {
+    picture = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
+    major = yes
+
+    ai_check_interval = 60
+
+    desc = form_the_empire_of_west_albion_decision_desc
+    selection_tooltip = form_the_empire_of_west_albion_decision_tooltip
+
+    is_shown = {
+        is_landed = yes
+        exists = dynasty # Everyone should have a dynasty, but in case they don't...
+        NOT = {
+            exists = title:e_west_albion.holder
+        }
+        is_any_elf_type = yes
+        OR = {
+            highest_held_title_tier < tier_empire
+            primary_title = title:e_east_albion
+        }
+        has_title = title:k_dumnonia
+        capital_province = {
+            geographical_region = world_europe_west_britannia
+        }
+    }
+
+    is_valid = {
+        is_independent_ruler = yes
+        prestige_level >= 4
+        piety_level >= 4
+        OR = {
+            has_title = title:c_worcestershire
+        }
+        OR = {
+            has_title = title:c_shropshire
+        }
+        OR = {
+            has_title = title:c_warwickshire
+        }
+        OR = {
+            has_title = title:c_staffordshire
+        }
+        completely_controls = title:k_dumnonia
+        completely_controls = title:k_wales
+        completely_controls = title:k_ireland
+        completely_controls = title:k_brittany
+        has_expedition_amount_trigger = { LOCATION = title:b_drogheda AMOUNT = 5 }
+        has_expedition_amount_trigger = { LOCATION = title:b_ennis AMOUNT = 5 }
+        has_expedition_amount_trigger = { LOCATION = title:b_rohan AMOUNT = 5 }
+    }
+
+    effect = {
+        save_scope_as = founder
+        create_title_and_vassal_change = {
+            type = created
+            save_scope_as = change
+        }
+        title:e_west_albion = {
+            change_title_holder = {
+                holder = scope:founder
+                change = scope:change
+            }
+        }
+        resolve_title_and_vassal_change = scope:change
+
+        add_prestige = major_prestige_gain
+
+        title:k_dumnonia = { set_de_jure_liege_title = title:e_west_albion }
+        title:k_wales = { set_de_jure_liege_title = title:e_west_albion }
+        title:k_ireland = { set_de_jure_liege_title = title:e_west_albion }
+        title:k_brittany = { set_de_jure_liege_title = title:e_west_albion }
     }
 
     cost = {
