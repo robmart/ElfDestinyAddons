@@ -1,0 +1,12 @@
+﻿camelot_ruins_respect_bonus = 0.1
+
+aeluran_respect_from_buildings = {
+    value = 0
+    if = {
+        limit = {
+            has_albion_ruins_trigger = yes
+        }
+
+        add = camelot_ruins_respect_bonus
+    }
+}

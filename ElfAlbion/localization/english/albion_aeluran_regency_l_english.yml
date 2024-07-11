@@ -1,0 +1,4 @@
+﻿l_english:
+ from_buildings:0 "From Buildings"
+ aeluran_respect_from_buildings:0 "[Character.Custom('Aeluran_Respect_From_Buildings_Albion_Value_Name')]"
+ aeluran_respect_from_albion_ruins:0 "[GetBuilding('city_of_camelot_ruins').GetName]"

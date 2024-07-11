@@ -1,7 +1,8 @@
-e_west_albion = {
-    color = { 0 0 0 }
+﻿e_west_albion = {
+    color = "white"
     capital = c_wiltshire
     can_be_named_after_dynasty = no
+    delete_on_destroy = yes
 
     ai_primary_priority = {
         if = {
@@ -13,9 +14,10 @@ e_west_albion = {
     }
 
     k_dumnonia = {
-        color = { 0 0 0 }
+        color = "white"
         capital = c_wiltshire
         can_be_named_after_dynasty = no
+        delete_on_destroy = yes
 
         ai_primary_priority = {
             if = {
@@ -30,9 +32,10 @@ e_west_albion = {
 }
 
 e_east_albion = {
-    color = { 0 0 0 }
-    capital =
+    color = "white"
+    capital = c_middlesex
     can_be_named_after_dynasty = no
+    delete_on_destroy = yes
 
     ai_primary_priority = {
         if = {
@@ -44,6 +47,18 @@ e_east_albion = {
     }
 
     k_lloegyr = {
+        color = "white"
+        capital = c_middlesex
+        can_be_named_after_dynasty = no
+        delete_on_destroy = yes
 
+        ai_primary_priority = {
+            if = {
+                limit = {
+                    is_any_elf_type = yes
+                }
+                add = 100
+            }
+        }
     }
 }

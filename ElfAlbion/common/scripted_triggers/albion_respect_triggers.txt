@@ -1,0 +1,8 @@
+﻿has_albion_ruins_trigger = {
+    save_temporary_scope_as = character
+    any_sub_realm_barony = {
+        exists = county.duchy.holder
+        county.duchy.holder = scope:character
+        has_building = city_of_camelot_ruins
+    }
+}

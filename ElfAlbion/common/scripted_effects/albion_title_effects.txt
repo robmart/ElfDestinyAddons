@@ -1,0 +1,33 @@
+﻿change_duchy_building_slot_location = {
+    random_duchy = {
+        limit = {
+            NOT = { this = $DUCHY$ }
+        }
+        save_scope_as = new_duchy
+    }
+
+    hidden_effect = {
+        $DUCHY$ = {
+            every_de_jure_county = {
+                limit = {
+                    NOT = {
+                        this = $TARGET$.county
+                    }
+                }
+                add_to_list = counties
+                set_de_jure_liege_title = scope:new_duchy
+            }
+        }
+    }
+
+    $TARGET$.title_province = {
+        add_building = $BUILDING$
+    }
+
+    hidden_effect = {
+        every_in_list = {
+            list = counties
+            set_de_jure_liege_title = $DUCHY$
+        }
+    }
+}

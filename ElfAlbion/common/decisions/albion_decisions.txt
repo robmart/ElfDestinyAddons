@@ -1,4 +1,4 @@
-form_the_kingdom_of_dumnonia_decision = {
+﻿form_the_kingdom_of_dumnonia_decision = {
     picture = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
     major = yes
 
@@ -9,6 +9,7 @@ form_the_kingdom_of_dumnonia_decision = {
 
     is_shown = {
         is_landed = yes
+        exists = dynasty # Everyone should have a dynasty, but in case they don't...
         NOT = {
             exists = title:k_dumnonia.holder
         }
@@ -28,11 +29,10 @@ form_the_kingdom_of_dumnonia_decision = {
         is_independent_ruler = yes
         prestige_level >= 2
         piety_level >= 2
-        has_title = title:c_dorset
-        has_title = title:c_somerset
         completely_controls = title:d_cornwall
+        completely_controls = title:d_somerset
         completely_controls = title:d_gloucester
-        has_expedition_amount_trigger = { LOCATION = title:b_salisbury AMOUNT = 2 }
+        # has_expedition_amount_trigger = { LOCATION = title:b_salisbury AMOUNT = 5 }
     }
 
     effect = {
@@ -51,14 +51,16 @@ form_the_kingdom_of_dumnonia_decision = {
 
         add_prestige = major_prestige_gain
 
-        title:c_dorset = { set_de_jure_liege_title = title:d_cornwall }
-        title:c_somerset = { set_de_jure_liege_title = title:d_cornwall }
         title:d_cornwall = { set_de_jure_liege_title = title:k_dumnonia }
-        title:d_gloucester = { set_de_jure_liege_title = title:k_dumnonia }
-
-        hidden_effect = {
-            title:c_hampton = { set_de_jure_liege_title = title:d_canterbury }
+        title:d_somerset = { set_de_jure_liege_title = title:k_dumnonia }
+        title:d_gloucester = {
+            set_de_jure_liege_title = title:k_dumnonia
+            hidden_effect = { set_capital_county = title:c_wiltshire }
         }
+
+        set_realm_capital = title:c_wiltshire
+
+        change_duchy_building_slot_location = { DUCHY = title:d_gloucester TARGET = title:b_salisbury BUILDING = city_of_camelot_ruins }
     }
 
     cost = {
@@ -68,7 +70,7 @@ form_the_kingdom_of_dumnonia_decision = {
             # ... but costs for players.
             if = {
                 limit = { is_ai = no }
-                add = 200
+                add = 250
             }
         }
     }

@@ -1,0 +1,30 @@
+﻿city_of_camelot_ruins = {
+
+    can_construct_potential = {
+        always = no
+    }
+
+    is_enabled = {
+        county.holder ?= {
+            has_title = prev.duchy
+            has_title = title:k_dumnonia
+            is_any_elf_type = yes
+        }
+    }
+    show_disabled = yes
+
+    character_modifier = {
+        monthly_prestige = 0.3
+        monthly_dynasty_prestige_mult = 0.1
+        court_grandeur_baseline_add = 2
+        owned_legend_spread_mult = 0.2
+        legitimacy_gain_mult = 0.1
+    }
+    duchy_capital_county_modifier = {
+        monthly_county_control_growth_factor = 0.10
+        county_opinion_add = 10
+        epidemic_resistance = 5
+    }
+
+    type = duchy_capital
+}

@@ -1,0 +1,6 @@
+﻿l_english:
+ building_city_of_camelot_ruins:0 "Ruins of Camelot"
+ building_city_of_camelot_ruins_desc:0 "The ruins of the once glorious city of Camelot, once the seat of the Great King Arthur."
+ building_type_city_of_camelot:0 "City of Camelot"
+ building_type_city_of_camelot_ruins:0 "$building_type_city_of_camelot$"
+ building_type_city_of_camelot_ruins_desc:0 "$building_city_of_camelot_ruins_desc$"

@@ -1,0 +1,27 @@
+﻿WesternAlbionName = {
+    type = character
+    text = {
+        trigger = {
+            exists = title:e_east_albion.holder
+        }
+        localization_key = western_albion
+    }
+    text = {
+        localization_key = albion
+        fallback = yes
+    }
+}
+
+EasternAlbionName = {
+    type = character
+    text = {
+        trigger = {
+            exists = title:e_west_albion.holder
+        }
+        localization_key = western_albion
+    }
+    text = {
+        localization_key = albion
+        fallback = yes
+    }
+}

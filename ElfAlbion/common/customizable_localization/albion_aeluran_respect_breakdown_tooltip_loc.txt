@@ -1,0 +1,8 @@
+﻿Aeluran_Respect_From_Buildings_Albion_Value_Name = {
+    type = character
+
+    text = {
+        trigger = { has_albion_ruins_trigger = yes }
+        localization_key = aeluran_respect_from_albion_ruins
+    }
+}

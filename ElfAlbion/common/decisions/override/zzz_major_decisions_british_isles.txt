@@ -1,0 +1,104 @@
+﻿
+
+#############################################
+# #Restore Dumnonia to the map				#
+# by Ewan Cowhig Croft						#
+#############################################
+restore_dumnonia_decision = {
+    picture = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
+    major = yes
+
+    ai_check_interval = 120
+
+    desc = restore_dumnonia_decision_desc
+    selection_tooltip = restore_dumnonia_decision_tooltip
+
+    is_shown = {
+        is_ruler = yes
+        is_landed = yes
+        exists = dynasty # Everyone should have a dynasty, but in case they don't...
+        OR = {
+            OR = {
+                has_title = title:d_cornwall
+                has_title = title:c_cornwall
+                has_title = title:c_devon
+            }
+            dynasty = dynasty:1029001	#The Cornish royal house is always able to get away with these shenanigans.
+            culture = culture:cornish	#Cornish characters are always able to dream.
+        }
+        OR = {	#Must be a culture at least traditionally interlinked with Cornwall.
+            dynasty = dynasty:1029001	#The Cornish royal house is at it again.
+            culture = { has_cultural_pillar = heritage_brythonic }
+        }
+        NOT = {	#You can only do it once.
+            is_target_in_global_variable_list = {
+                name = unavailable_unique_decisions
+                target = flag:flag_restored_dumnonia
+            }
+        }
+        OR = {
+            government_has_flag = government_is_feudal
+            government_has_flag = government_is_republic
+            government_has_flag = government_is_clan
+        }
+        highest_held_title_tier <= tier_duchy
+
+        #Albion
+        is_any_elf_type = no
+        #End Albion
+    }
+
+    is_valid = {
+        is_independent_ruler = yes
+        prestige_level >= very_high_prestige_level
+        has_title = title:d_cornwall
+        completely_controls = title:d_cornwall
+        any_realm_province = { #You must have some realm support for your claims.
+            culture = { has_cultural_pillar = heritage_brythonic }
+        }
+    }
+
+    is_valid_showing_failures_only = {
+        is_available_adult = yes
+    }
+
+    effect = {
+        show_as_tooltip = {
+            restore_dumnonia_decision_scripted_effect = yes
+        }
+        save_scope_as = founder
+        trigger_event = {
+            id = british_isles.4001
+        }
+        #Notify other players.
+        every_player = {
+            limit = {
+                NOT = { this = root }
+                is_within_diplo_range = { CHARACTER = root }
+            }
+            trigger_event = british_isles.4002
+        }
+        hidden_effect = {
+            add_to_global_variable_list = {
+                name = unavailable_unique_decisions
+                target = flag:flag_restored_dumnonia
+            }
+            set_global_variable = {
+                name = flag_restored_dumnonia
+                value = root
+            }
+        }
+    }
+
+    cost = {
+        gold = 300
+    }
+
+    ai_potential = {
+        always = yes
+    }
+
+    ai_will_do = {
+        base = 100
+    }
+}

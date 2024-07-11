@@ -1,0 +1,8 @@
+﻿l_english:
+ k_dumnonia:0 "Dumnonia"
+ e_west_albion:0 "[GetPlayer.Custom('WesternAlbionName')]"
+ k_lloegyr:0 "Lloegyr"
+ e_east_albion:0 "[GetPlayer.Custom('EasternAlbionName')]"
+
+ western_albion:0 "Western $albion$"
+ eastern_albion:0 "Eastern $albion$"
