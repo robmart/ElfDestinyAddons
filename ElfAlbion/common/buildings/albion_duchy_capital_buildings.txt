@@ -59,11 +59,15 @@ city_of_camelot_01 = {
         owned_legend_spread_mult = 0.4
         legitimacy_gain_mult = 0.2
         same_faith_opinion = 10
+        knight_limit = 2
+        knight_effectiveness_mult = 0.25
     }
     duchy_capital_county_modifier = {
         monthly_county_control_growth_factor = 0.25
         county_opinion_add = 25
         epidemic_resistance = 10
+        tax_mult = 0.25
+        levy_size = 0.25
     }
 
     type_icon = "icon_building_legendary_palace.dds"

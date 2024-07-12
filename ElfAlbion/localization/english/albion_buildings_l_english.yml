@@ -4,3 +4,6 @@
  building_type_city_of_camelot:0 "City of Camelot"
  building_type_city_of_camelot_ruins:0 "$building_type_city_of_camelot$"
  building_type_city_of_camelot_ruins_desc:0 "$building_city_of_camelot_ruins_desc$"
+
+ building_city_of_camelot_01:0 "Reconstructed City of Camelot"
+ building_city_of_camelot_01_desc:0 "The City of Camelot, now partially rebuilt. The City shall be the seat of a Great King once more."
