@@ -112,18 +112,9 @@ form_the_empire_of_west_albion_decision = {
         is_independent_ruler = yes
         prestige_level >= 4
         piety_level >= 4
-        OR = {
-            has_title = title:c_worcestershire
-        }
-        OR = {
-            has_title = title:c_shropshire
-        }
-        OR = {
-            has_title = title:c_warwickshire
-        }
-        OR = {
-            has_title = title:c_staffordshire
-        }
+        is_title_in_same_realm_trigger = { TITLE = c_worcestershire }
+        is_title_in_same_realm_trigger = { TITLE = c_shropshire }
+        is_title_in_same_realm_trigger = { TITLE = c_hereford }
         completely_controls = title:k_dumnonia
         completely_controls = title:k_wales
         completely_controls = title:k_ireland
@@ -149,6 +140,10 @@ form_the_empire_of_west_albion_decision = {
 
         add_prestige = major_prestige_gain
 
+        title:c_worcestershire = { set_de_jure_liege_title = title:d_west_mercia }
+        title:c_shropshire = { set_de_jure_liege_title = title:d_west_mercia }
+        title:c_hereford = { set_de_jure_liege_title = title:d_west_mercia }
+        title:d_west_mercia = { set_de_jure_liege_title = title:k_wales }
         title:k_dumnonia = { set_de_jure_liege_title = title:e_west_albion }
         title:k_wales = { set_de_jure_liege_title = title:e_west_albion }
         title:k_ireland = { set_de_jure_liege_title = title:e_west_albion }

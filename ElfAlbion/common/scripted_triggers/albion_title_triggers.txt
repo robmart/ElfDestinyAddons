@@ -1,0 +1,10 @@
+﻿is_title_in_same_realm_trigger = {
+    custom_description = {
+        text = is_title_in_same_realm_trigger
+        object = title:$TITLE$
+        OR = {
+            has_title = title:$TITLE$
+            title:$TITLE$.holder.top_liege = top_liege
+        }
+    }
+}

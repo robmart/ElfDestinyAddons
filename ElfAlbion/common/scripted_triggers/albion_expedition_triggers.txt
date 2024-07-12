@@ -1,4 +1,5 @@
 ﻿has_expedition_amount_trigger = {
+    save_temporary_scope_as = character
     $LOCATION$ = {
         save_temporary_scope_as = location
     }

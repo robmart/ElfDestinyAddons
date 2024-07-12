@@ -1,0 +1,4 @@
+﻿is_title_in_same_realm_trigger = {
+    first = is_title_in_same_realm_trigger_first
+    third = is_title_in_same_realm_trigger_third
+}
