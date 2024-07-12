@@ -23,7 +23,6 @@
     duchy_capital_county_modifier = {
         monthly_county_control_growth_factor = 0.10
         county_opinion_add = 10
-        epidemic_resistance = 5
     }
 
     type_icon = "icon_building_legendary_palace.dds"
@@ -65,7 +64,7 @@ city_of_camelot_01 = {
     duchy_capital_county_modifier = {
         monthly_county_control_growth_factor = 0.25
         county_opinion_add = 25
-        epidemic_resistance = 10
+        development_growth = 0.1
         tax_mult = 0.25
         levy_size = 0.25
     }
