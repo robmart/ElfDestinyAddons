@@ -1,0 +1,92 @@
+﻿# take_all_dum = {
+#     major = yes
+#
+#     effect = {
+#
+#         save_scope_as = founder
+#         create_title_and_vassal_change = {
+#             type = created
+#             save_scope_as = change
+#         }
+#         title:d_cornwall = {
+#             every_de_jure_county = {
+#                 change_title_holder = {
+#                     holder = scope:founder
+#                     change = scope:change
+#                 }
+#             }
+#         }
+#         title:d_somerset = {
+#             every_de_jure_county = {
+#                 change_title_holder = {
+#                     holder = scope:founder
+#                     change = scope:change
+#                 }
+#             }
+#         }
+#         title:d_gloucester = {
+#             every_de_jure_county = {
+#                 change_title_holder = {
+#                     holder = scope:founder
+#                     change = scope:change
+#                 }
+#             }
+#         }
+#         resolve_title_and_vassal_change = scope:change
+#     }
+# }
+# take_all_w_alb = {
+#     major = yes
+#
+#     effect = {
+#
+#         save_scope_as = founder
+#         create_title_and_vassal_change = {
+#             type = created
+#             save_scope_as = change
+#         }
+#         title:c_worcestershire = {
+#             change_title_holder = {
+#                 holder = scope:founder
+#                 change = scope:change
+#             }
+#         }
+#         title:c_shropshire = {
+#             change_title_holder = {
+#                 holder = scope:founder
+#                 change = scope:change
+#             }
+#         }
+#         title:c_hereford = {
+#             change_title_holder = {
+#                 holder = scope:founder
+#                 change = scope:change
+#             }
+#         }
+#         title:k_wales = {
+#             every_de_jure_county = {
+#                 change_title_holder = {
+#                     holder = scope:founder
+#                     change = scope:change
+#                 }
+#             }
+#         }
+#         title:k_ireland = {
+#             every_de_jure_county = {
+#                 change_title_holder = {
+#                     holder = scope:founder
+#                     change = scope:change
+#                 }
+#             }
+#         }
+#         title:k_brittany = {
+#             every_de_jure_county = {
+#                 change_title_holder = {
+#                     holder = scope:founder
+#                     change = scope:change
+#                 }
+#             }
+#         }
+#         resolve_title_and_vassal_change = scope:change
+#     }
+# }

@@ -2,3 +2,4 @@
  has_expedition_amount_trigger:0 "You have performed an [GetActivityType('activity_expedition').GetName|l] [amount] times in the [location.GetName]"
  is_title_in_same_realm_trigger_first:0 "The [TARGET_TITLE.GetName] is in your [realm|E]"
  is_title_in_same_realm_trigger_third:0 "The [TARGET_TITLE.GetName] is in [CHARACTER.GetShortUINamePossessive] [realm|E]"
+ HAS_BULDING_TRIGGER_THIRD:0 "[PROVINCE.GetName] has a $BUILDING|V$ [building|E]"
