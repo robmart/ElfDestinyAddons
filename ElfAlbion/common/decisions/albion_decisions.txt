@@ -148,6 +148,21 @@ form_the_empire_of_west_albion_decision = {
         title:k_wales = { set_de_jure_liege_title = title:e_west_albion }
         title:k_ireland = { set_de_jure_liege_title = title:e_west_albion }
         title:k_brittany = { set_de_jure_liege_title = title:e_west_albion }
+
+
+        if = {
+            limit = {
+                exists = title:e_east_albion.holder
+            }
+
+            title:e_west_albion = {
+                set_title_name = western_albion
+            }
+
+            title:e_east_albion = {
+                set_title_name = eastern_albion
+            }
+        }
     }
 
     cost = {
